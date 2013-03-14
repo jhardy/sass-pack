@@ -2,9 +2,9 @@
   "name": "sass-packs",
   "version": "0.5",
   "main": [
-    "_normalize.scss",
-    "_helpers.scss",
-    "_utility.scss",
+    "packs/_normalize.scss",
+    "packs/_helpers.scss",
+    "packs/_utility.scss",
   ],
   "dependencies": {},
 }
