@@ -4,7 +4,7 @@
   "main": [
     "packs/_normalize.scss",
     "packs/_helpers.scss",
-    "packs/_utility.scss",
+    "packs/_utility.scss"
   ],
   "dependencies": {},
 }
