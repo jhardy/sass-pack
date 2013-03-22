@@ -1,12 +1,12 @@
 {
   "name": "sass-pack",
-  "version": "0.5.0",
   "main": [
-    "packs/_normalize.scss",
-    "packs/_helpers.scss",
-    "packs/_utility.scss"
+    "./packs/_normalize.scss",
+    "./packs/_helpers.scss",
+    "./packs/_utility.scss"
   ],
-  "dependencies": {},
+  "version": "0.5.0",
+  "dependencies": {}
 }
 
 
