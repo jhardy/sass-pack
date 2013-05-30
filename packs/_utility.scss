@@ -69,3 +69,18 @@
   background-repeat: $repeat;
 
 }
+
+
+// Mixin to convert from pixel to rem's with fallback for older browsers
+//
+// -----------------------------------------------------------------------------
+
+
+@mixin font-size($size: 16, $fallback: true) {
+  @if $fallback {
+    font-size: $size * 1px;
+  }
+
+  font-size: ($size/16) * 1rem;
+}
+
