@@ -67,6 +67,24 @@
   * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 }
 
+// -----------------------------------------------------------------------------
+// Absolute Positioning
+// -----------------------------------------------------------------------------
+@mixin abs($t, $r, $b, $l) {
+  @if $t {
+    top: $t;
+  }
+  @if $r {
+    right: $r;
+  }
+  @if $b {
+    bottom: $b;
+  }
+  @if $l {
+    left: $l;
+  }
+}
+
 
 
 
