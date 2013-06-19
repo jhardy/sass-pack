@@ -71,6 +71,8 @@
 // Absolute Positioning
 // -----------------------------------------------------------------------------
 @mixin abs($t, $r, $b, $l) {
+  position: absolute;
+
   @if $t {
     top: $t;
   }
