@@ -87,6 +87,28 @@
   }
 }
 
+// -----------------------------------------------------------------------------
+// Before and after mixins
+//
+// Use to quickly add a before or after pseudo element
+// -----------------------------------------------------------------------------
+@mixin before($content: "", $display: block) {
+  &:before {
+    content: $content;
+    display: $display;
+    @content;
+  }
+}
+
+@mixin after($content: "", $display: block) {
+  &:after {
+    content: $content;
+    display: $display;
+    @content;
+  }
+}
+
+
 
 
 
