@@ -76,11 +76,11 @@
 // -----------------------------------------------------------------------------
 
 
-@mixin font-size($size: 16, $fallback: true) {
+@mixin font-size($size: 16, $base:16, $fallback: true) {
   @if $fallback {
     font-size: $size * 1px;
   }
 
-  font-size: ($size/16) * 1rem;
+  font-size: ($size/$base) * 1rem;
 }
 
