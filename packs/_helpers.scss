@@ -59,12 +59,23 @@
 }
 
 
+
+@mixin box-sizing($type: bb) {
+
+  @if $type == bb { $type: border-box ; }
+  @if $type == cb { $type: content-box; }
+  @if $type == pb { $type: pading-box; }
+
+  -moz-box-sizing: $type;
+  box-sizing: $type;
+}
+
 // -----------------------------------------------------------------------------
 // Border Box Sizing
 // -----------------------------------------------------------------------------
 
 @mixin border-box-sizing {
-  * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  * { @include box-sizing(); }
 }
 
 // -----------------------------------------------------------------------------
