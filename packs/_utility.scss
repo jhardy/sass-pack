@@ -8,8 +8,23 @@
 
 
 
-@function pxtoem($px-value, $context: 16) {
-  @return #{$px-value/$context}em;
+@function pxtoem($px-values, $context: 16) {
+
+  $em-list: ();
+
+  @each $px-value in $px-values {
+
+    @if($px-value == 0 or $px-value == auto) {
+      $em-list: append($em-list, $px-value);
+    }
+
+    @else {
+      $em:  ($px-value / $context) + em;
+      $em-list: append($em-list, $em);
+    }
+  }
+
+  @return $em-list;
 }
 
 
