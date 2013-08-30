@@ -99,6 +99,27 @@
 }
 
 // -----------------------------------------------------------------------------
+// Relative Positioning
+// -----------------------------------------------------------------------------
+@mixin rel($t: false, $r: false, $b: false, $l:false) {
+  position: relative;
+
+  @if $t {
+    top: $t;
+  }
+  @if $r {
+    right: $r;
+  }
+  @if $b {
+    bottom: $b;
+  }
+  @if $l {
+    left: $l;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
 // Before and after mixins
 //
 // Use to quickly add a before or after pseudo element
