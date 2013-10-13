@@ -1,6 +1,5 @@
 {
-  "name": "sass-pack",
-  "version": "0.5.1",
+  "name": "Sass Pack",
   "tags": ["ui", "buttons", "grid"],
   "description" : "Really kick ass sass tools"
 }
