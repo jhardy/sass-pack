@@ -152,34 +152,42 @@
 // ---------------------------------------------------------------------------------------------
 //  Important Block, !important all the things!
 //  Helpful when you are dealing with a ton of inline styles or just want to watch the world burn.
-//  Takes a list of properties and values and adds important to the end of each pair
+//  Takes a map of properties and values and adds important to the end of each pair
 //
 //  ex:
-//      div { @include important-block(width 20px height 50px color red font-size 2em); }
+//      div { @include important-block((width: 20px, height: 50px, color: red, font-size: 2em)); }
 //
-//      OR
 //
-//      $important-list: float, left, display, block, width, 100%
-//      header { @include important-block($important-list); }
 // ----------------------------------------------------------------------------------------------
 
 @mixin important-block($list) {
-
-    $length: length($list);
-
-    @if( $length%2 != 0) {
-        @warn("Important Block must have an even number of arguments");
-    } @else {
-
-        @for $i from 1 through ($length/2) {
-            $prop: nth($list, ($i + $i) - 1);
-            $value: nth($list, $i + $i);
-            #{$prop}: #{$value}  !important;
-        }
-
+    @each $prop, $val in $map {
+      #{$prop} : #{$val} !important;
     }
 }
 
+
+// ---------------------------------------------------------------------------------------------
+//  Quickly add the same styles to :hover, :focus, and :active states
+//
+//  ex:
+//      a {
+//        text-decoration: none;
+//        color: blue;
+//
+//        @include link-state {
+//            text-decoration: underline;
+//            color: red;
+//         }
+//      }
+//
+// ----------------------------------------------------------------------------------------------
+
+@mixin link-state() {
+  &:hover, &:focus, &:active {
+    @content
+  }
+}
 
 
 
