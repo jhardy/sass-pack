@@ -160,7 +160,7 @@
 //
 // ----------------------------------------------------------------------------------------------
 
-@mixin important-block($list) {
+@mixin important-block($map) {
     @each $prop, $val in $map {
       #{$prop} : #{$val} !important;
     }
