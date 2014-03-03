@@ -1,4 +1,4 @@
 sass-pack
 =========
 
-Sass Pack
+Sass Pack - tools for sass
