@@ -1,4 +1,4 @@
 sass-pack
 =========
 
-Sass Pack - Tools for sass and compass
+Sass Pack - Tools for Sass and compass
